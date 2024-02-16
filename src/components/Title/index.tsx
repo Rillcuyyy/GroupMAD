@@ -9,13 +9,17 @@ const Title = ({text})=> {
     );
 };
 
+
+
 const header = StyleSheet.create({
     input:{
-        fontSize: 20,
-        color: 'red',
+        fontSize: 35,
+        color: 'black',
         fontWeight:'bold',
-        textAlign: 'center',
-        margin: 10
+        marginLeft: 5,
+        margin: 10,
+        marginBottom: 30
+        
     },
 });
 
