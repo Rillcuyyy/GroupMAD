@@ -1,72 +1,33 @@
-
 import React from 'react';
 import {SafeAreaView, StyleSheet, TextInput,Text,View,ScrollView,TouchableOpacity} from 'react-native';
-const TextInputExample = () => {
-  const [text, onChangeText] = React.useState('Useless Text');
-  const [number, onChangeNumber] = React.useState('');
+import SignInPage from './src/components/Signin';
+import YourComponent from './src/components/FetchingData';
 
-  const App = () => { 
-    
-        return (
-        <View>
-            {/* <Title text="Basic RN"/> */}
-        <Title text="Registration"/>
-            <ScrollView>
-                <Text style={style.username}>Username</Text>
-                <Input placeholder="Masukan username anda"/>
-                <Text style={style.password}>Password</Text>
-                <Input placeholder="Masukan password anda"/>
-            
-            <TouchableOpacity style={styles.button}>
-                <Text>Register</Text>
-            </TouchableOpacity>
-            </ScrollView>
-        </View>
-        );
-};
 
+const App = () => {
   return (
-    <SafeAreaView>
-      <TextInput
-        style={styles.input}
-        onChangeText={onChangeText}
-        value={text}
-      />
-      <TextInput
-        style={styles.input}
-        onChangeText={onChangeNumber}
-        value={number}
-        placeholder="useless placeholder"
-        keyboardType="numeric"
-      />
-    </SafeAreaView>
-  );
-};
-
-const styles = StyleSheet.create({
-  input: {
-    height: 40,
-    margin: 12,
-    borderWidth: 1,
-    padding: 10,
-  },
-});
+    <View>
+      <ScrollView>
+      {/* <SignInPage/> */}
+      <Text style={style.header}> Users List </Text>
+      <YourComponent/>
+      </ScrollView>
+    </View>
+  )
+}
 
 const style = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        paddingHorizontal: 10,
-    },
-    button: {
-        alignItems: 'center',
-        backgroundColor: "violet",
-        padding: 15,
-        borderRadius: 20,
-        margin: 20,
-        color: 'white',
-        marginHorizontal: 25,
-    },
-});
+  header: {
+      fontSize: 45, 
+      color: 'black', 
+      fontWeight:'bold', 
+      textAlign:'left',
+      margin: 20,
+      marginLeft: 0,
+      marginBottom: 30,
+      padding: 10,
+  },
+})
 
-export default TextInputExample;
+
+export default App;
